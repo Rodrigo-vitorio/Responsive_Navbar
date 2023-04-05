@@ -26,14 +26,35 @@ header{
     color: white;
 }
 
-.navbar a {
-    padding: 0px 8px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    margin: 15px 10px;
+
+}
+.navbar  .links{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+  .links a {
     text-decoration: none;
+    font-size: 1.1em;
     color: white;
 }
-.navbar a:hover{
+
+ a:hover{
     color: #FF9309
 }
+.toggle_btn{
+    display: none;
+    color: white;
+    text-align: right;
+    cursor: pointer;
+    
+}
+
 
 .button-start{
     padding: 8px 12px;
@@ -51,6 +72,19 @@ header{
 .button-start:active{
     scale: 0.95;
 }
+.button-start-mobile{
+    padding: 8px 12px;
+    background-color: orange;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    text-align: center;
+    outline: none;
+    cursor: pointer; 
+    transition: scale .5 ease;
+    font-size: .8em;
+    font-weight: 700;
+}
 .secao{
     height:calc(100vh - 60px);
     display: flex;
@@ -64,3 +98,58 @@ header{
 .secao p{
     margin-top: 20px;
 }
+/* dropwown_menu */
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 150px;
+    height: 0px;
+    background: rgba(225, 225, 225, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;  
+    padding: 5px;
+    display: none;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 240px;
+}
+.dropdown_menu li{
+    display: flex;
+    padding: 0.7rem;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown_menu .button-start-mobile{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* responsive design */
+@media(max-width: 992px){
+    .navbar .links,.button-start{
+        display: none;
+    }
+    .toggle_btn{
+        display: block;
+        
+    }
+    .secao{
+        min-width: 500px;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+    
+}
+@media(max-width:576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+        margin-top: 20px;
+    }
+}
+
