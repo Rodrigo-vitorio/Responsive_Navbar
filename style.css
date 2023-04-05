@@ -9,8 +9,8 @@
 }
 
 body{
+    background-color: black;
     width: 100vw;
-    height: 100vh;
     background: url(imagens/background.avif) center center no-repeat;  
     background-size: cover;
     overflow: hidden;
@@ -93,7 +93,6 @@ header{
     flex-direction: column;
     text-align: center;
     color: white;
-    float: right;
     
 }
 .secao p{
@@ -152,9 +151,7 @@ header{
         width: unset;
         margin-top: 20px;
     }
-    .secao{
-        min-width: 500px;
-    }
+    
 
 
 }
