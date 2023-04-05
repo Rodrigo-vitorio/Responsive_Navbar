@@ -93,6 +93,7 @@ header{
     flex-direction: column;
     text-align: center;
     color: white;
+    float: right;
     
 }
 .secao p{
@@ -151,5 +152,10 @@ header{
         width: unset;
         margin-top: 20px;
     }
+    .secao{
+        min-width: 500px;
+    }
+
+
 }
 
