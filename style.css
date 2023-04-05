@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family= Schibsted+ Grotesk :wght@500;700 & display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Schibsted Grotesk', sans-serif;
+
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url(imagens/background.avif) center center no-repeat;  
+    background-size: cover;
+    overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+.logo {
+    user-select: none;
+    color: white;
+}
+
+.navbar a {
+    padding: 0px 8px;
+    text-decoration: none;
+    color: white;
+}
+.navbar a:hover{
+    color: #FF9309
+}
+
+.button-start{
+    padding: 8px 12px;
+    background-color: orange;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    text-align: center;
+    outline: none;
+    cursor: pointer; 
+    transition: scale .5 ease;
+    font-size: .8em;
+    font-weight: 700;
+}
+.button-start:active{
+    scale: 0.95;
+}
+.secao{
+    height:calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    
+}
+.secao p{
+    margin-top: 20px;
+}
