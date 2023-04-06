@@ -11,16 +11,13 @@
 
 body{
     background-color: black;
-    width: 100vw;
+    height: 100vh;
     background: url(imagens/background.avif) center center no-repeat;  
     background-size: cover;
-    overflow: hidden;
 }
 header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 1.25em;
+    position: relative;
+    padding: 0 2rem;
 }
 .logo {
     user-select: none;
@@ -28,17 +25,22 @@ header{
 }
 
 .navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    flex: 1;
-    margin:  0.9375em 0.625em;
 
 }
 .navbar  .links{
     display: flex;
-    gap: 0.9375em;
-    list-style: none;
+    gap: 2rem;
 }
+ ul {
+    list-style: none;
+  }
   .links a {
     text-decoration: none;
     font-size: 1.1em;
@@ -51,14 +53,14 @@ header{
 .toggle_btn{
     display: none;
     color: white;
-    text-align: right;
     cursor: pointer;
+    font-size: 1.5rem;
     
 }
 
 
 .button-start{
-    padding: 8px 12px;
+    padding: 0.5rem 1rem;
     background-color: orange;
     border-radius: 20px;
     color: white;
@@ -67,9 +69,13 @@ header{
     outline: none;
     cursor: pointer; 
     transition: scale .5 ease;
-    font-size: .8em;
+    font-size: 1rem;
     font-weight: 700;
 }
+.button-start:hover {
+    scale: 1.10;
+    color: black
+  }
 .button-start:active{
     scale: 0.95;
 }
@@ -106,8 +112,8 @@ header{
     position: absolute;
     right: 2rem;
     top: 60px;
-    width: 150px;
-    height: 0px;
+    width: 300px;
+    height: 0;
     background: rgba(225, 225, 225, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 10px;
@@ -117,7 +123,7 @@ header{
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown_menu.open{
-    height: 240px;
+    height: 250px;
 }
 .dropdown_menu li{
     display: flex;
@@ -133,15 +139,13 @@ header{
 }
 /* responsive design */
 @media(max-width: 992px){
-    .navbar .links,.button-start{
+    .navbar .links,
+    .navbar .button-start{
         display: none;
     }
-    .toggle_btn{
+    .navbar .toggle_btn{
         display: block;
         
-    }
-    .secao{
-        min-width: 500px;
     }
     .dropdown_menu{
         display: block;
@@ -152,7 +156,6 @@ header{
     .dropdown_menu{
         left: 2rem;
         width: unset;
-        margin-top: 20px;
     }
     
 
